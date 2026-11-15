@@ -1,0 +1,64 @@
+### Requisições de exemplo (VS Code com a extensão "REST Client", Rider ou Visual Studio)
+### Suba a API antes: dotnet run --project src/ChuvaSegura.Monitoramento.Api
+
+@host = http://localhost:5080
+
+### 1) Verificar se a API está no ar
+GET {{host}}/health
+
+### 2) Listar os pontos (o ponto de exemplo "Ipiranga 01" é criado na primeira execução)
+GET {{host}}/api/pontos
+
+### 3) Criar um novo ponto de monitoramento
+POST {{host}}/api/pontos
+Content-Type: application/json
+
+{
+  "nome": "Ponto Ipiranga 02 (simulado)",
+  "bairro": "Ipiranga",
+  "latitude": -23.5880,
+  "longitude": -46.6100,
+  "alturaInstalacaoCm": 100
+}
+
+### 4) Leitura NORMAL (distância 90 cm -> nível 10 cm)
+POST {{host}}/api/leituras
+Content-Type: application/json
+
+{ "pontoId": 2, "distanciaCm": 90 }
+
+### 5) Leitura de ATENÇÃO (distância 60 cm -> nível 40 cm)
+POST {{host}}/api/leituras
+Content-Type: application/json
+
+{ "pontoId": 2, "distanciaCm": 60 }
+
+### 6) Leitura de ALERTA (distância 35 cm -> nível 65 cm)
+POST {{host}}/api/leituras
+Content-Type: application/json
+
+{ "pontoId": 2, "distanciaCm": 35 }
+
+### 7) Leitura INVÁLIDA (fora da faixa do sensor) -> 422
+POST {{host}}/api/leituras
+Content-Type: application/json
+
+{ "pontoId": 2, "distanciaCm": 450 }
+
+### 8) Risco atual do ponto
+GET {{host}}/api/pontos/2/risco
+
+### 9) Risco do bairro (usado pelo app)
+GET {{host}}/api/bairros/Ipiranga/risco
+
+### 10) Histórico de leituras (paginado)
+GET {{host}}/api/pontos/2/leituras?pagina=1&tamanho=10
+
+### 11) Estatísticas das últimas 24 h
+GET {{host}}/api/pontos/2/estatisticas?horas=24
+
+### 12) Desativar / ativar um ponto
+POST {{host}}/api/pontos/2/desativar
+
+###
+POST {{host}}/api/pontos/2/ativar

@@ -1,0 +1,46 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuvaSegura.Monitoramento.Domain", "src\ChuvaSegura.Monitoramento.Domain\ChuvaSegura.Monitoramento.Domain.csproj", "{6AFFC4F2-CECF-48B7-8144-B2E404E353EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuvaSegura.Monitoramento.Application", "src\ChuvaSegura.Monitoramento.Application\ChuvaSegura.Monitoramento.Application.csproj", "{C754DC98-0B91-4C1C-82A1-B11BBCF8E9FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuvaSegura.Monitoramento.Infrastructure", "src\ChuvaSegura.Monitoramento.Infrastructure\ChuvaSegura.Monitoramento.Infrastructure.csproj", "{1D6E84AE-6CA6-473E-8839-638123A22EFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuvaSegura.Monitoramento.Api", "src\ChuvaSegura.Monitoramento.Api\ChuvaSegura.Monitoramento.Api.csproj", "{CAAB73D4-049E-416D-933D-CAD4C546FB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuvaSegura.Monitoramento.Tests", "tests\ChuvaSegura.Monitoramento.Tests\ChuvaSegura.Monitoramento.Tests.csproj", "{F630129E-1A33-4256-9F78-16732C740FF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AFFC4F2-CECF-48B7-8144-B2E404E353EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFFC4F2-CECF-48B7-8144-B2E404E353EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFFC4F2-CECF-48B7-8144-B2E404E353EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFFC4F2-CECF-48B7-8144-B2E404E353EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C754DC98-0B91-4C1C-82A1-B11BBCF8E9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C754DC98-0B91-4C1C-82A1-B11BBCF8E9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C754DC98-0B91-4C1C-82A1-B11BBCF8E9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C754DC98-0B91-4C1C-82A1-B11BBCF8E9FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6E84AE-6CA6-473E-8839-638123A22EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6E84AE-6CA6-473E-8839-638123A22EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6E84AE-6CA6-473E-8839-638123A22EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6E84AE-6CA6-473E-8839-638123A22EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAAB73D4-049E-416D-933D-CAD4C546FB9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAAB73D4-049E-416D-933D-CAD4C546FB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAAB73D4-049E-416D-933D-CAD4C546FB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAAB73D4-049E-416D-933D-CAD4C546FB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F630129E-1A33-4256-9F78-16732C740FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F630129E-1A33-4256-9F78-16732C740FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F630129E-1A33-4256-9F78-16732C740FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F630129E-1A33-4256-9F78-16732C740FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

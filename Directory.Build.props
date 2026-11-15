@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <!-- Permite rodar em máquinas que tenham apenas um runtime .NET mais novo (9, 10...) -->
+    <RollForward>LatestMajor</RollForward>
+  </PropertyGroup>
+</Project>
