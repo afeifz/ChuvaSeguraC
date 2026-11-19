@@ -191,7 +191,7 @@ Dependências: `Api → Application, Infrastructure` · `Infrastructure → Appl
 ### Decisões de projeto
 
 - **SQLite** para rodar sem instalar banco. Para trocar por Oracle ou SQL Server, basta trocar o provedor em `Infrastructure/DependencyInjection.cs`.
-- O banco é criado com `EnsureCreated`. Se quiserem usar *migrations*, rodem `dotnet ef migrations add Inicial` (projeto `Infrastructure`, projeto de inicialização `Api`) e troquem `EnsureCreatedAsync` por `MigrateAsync` em `DbInicializador`.
+- O banco é criado com `EnsureCreated`. É possível usar *migrations*, rodando `dotnet ef migrations add Inicial` (projeto `Infrastructure`, projeto de inicialização `Api`) e trocando `EnsureCreatedAsync` por `MigrateAsync` em `DbInicializador`, porém achei mais fácil e dinâmico utilizar EnsureCreated.
 - Valores decimais usam `double` porque o SQLite não suporta bem agregações com `decimal`.
 - A notificação ocorre **depois** do commit: o dado do sensor nunca é perdido por falha do serviço de alertas.
 - Fora do escopo desta entrega (extensões possíveis): reforçar o risco com a previsão do modelo de ML, autenticação por chave nos sensores e novas tentativas automáticas na chamada ao serviço Java.
