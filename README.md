@@ -116,13 +116,13 @@ São testes unitários (domínio e serviços, com repositórios falsos) e testes
 POST /api/leituras
 Content-Type: application/json
 
-{ "pontoId": 2, "distanciaCm": 35 }
+{ "pontoId": 1, "distanciaCm": 35 }
 ```
 
 ```json
 {
   "id": 1,
-  "pontoId": 2,
+  "pontoId": 1,
   "distanciaCm": 35,
   "nivelAguaCm": 65,
   "risco": "Alerta",
