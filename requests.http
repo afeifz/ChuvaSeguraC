@@ -25,40 +25,40 @@ Content-Type: application/json
 POST {{host}}/api/leituras
 Content-Type: application/json
 
-{ "pontoId": 2, "distanciaCm": 90 }
+{ "pontoId": 1, "distanciaCm": 90 }
 
 ### 5) Leitura de ATENÇÃO (distância 60 cm -> nível 40 cm)
 POST {{host}}/api/leituras
 Content-Type: application/json
 
-{ "pontoId": 2, "distanciaCm": 60 }
+{ "pontoId": 1, "distanciaCm": 60 }
 
 ### 6) Leitura de ALERTA (distância 35 cm -> nível 65 cm)
 POST {{host}}/api/leituras
 Content-Type: application/json
 
-{ "pontoId": 2, "distanciaCm": 35 }
+{ "pontoId": 1, "distanciaCm": 35 }
 
 ### 7) Leitura INVÁLIDA (fora da faixa do sensor) -> 422
 POST {{host}}/api/leituras
 Content-Type: application/json
 
-{ "pontoId": 2, "distanciaCm": 450 }
+{ "pontoId": 1, "distanciaCm": 450 }
 
 ### 8) Risco atual do ponto
-GET {{host}}/api/pontos/2/risco
+GET {{host}}/api/pontos/1/risco
 
 ### 9) Risco do bairro (usado pelo app)
 GET {{host}}/api/bairros/Ipiranga/risco
 
 ### 10) Histórico de leituras (paginado)
-GET {{host}}/api/pontos/2/leituras?pagina=1&tamanho=10
+GET {{host}}/api/pontos/1/leituras?pagina=1&tamanho=10
 
 ### 11) Estatísticas das últimas 24 h
-GET {{host}}/api/pontos/2/estatisticas?horas=24
+GET {{host}}/api/pontos/1/estatisticas?horas=24
 
 ### 12) Desativar / ativar um ponto
-POST {{host}}/api/pontos/2/desativar
+POST {{host}}/api/pontos/1/desativar
 
 ###
-POST {{host}}/api/pontos/2/ativar
+POST {{host}}/api/pontos/1/ativar
