@@ -155,7 +155,7 @@ Content-Type: application/json
 
 ## Contrato com o ESP32 (Wokwi)
 
-O circuito deve enviar, a cada ciclo, um `POST /api/leituras` com `pontoId` e `distanciaCm` (leitura do HC-SR04). Obs.: o Wokwi só enxerga endereços públicos; enquanto a API estiver só em `localhost`, use o plano B de imprimir no Serial o mesmo JSON que a API espera.
+O circuito deve enviar, a cada ciclo, um `POST /api/leituras` com `pontoId` e `distanciaCm` (leitura do HC-SR04). Obs.: o Wokwi só enxerga endereços públicos; foi configurado uma ponte em python na matéria de IOT para linkar por meio HiveMQ. Pode testar diretamente as requisições POST por meio da aplicação C#, não disponibilizarei o projeto Wokwi para não haver problemas entre as matérias na correção.
 
 ---
 
